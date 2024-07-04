@@ -19,11 +19,11 @@ jobs:
             - name: Set up Terraform
               uses: hashicorp/setup-terraform@v1
               with:
-                terraform_version: 0.14.7
+                terraform_version: 1.9.1
 
             - name: Configure AWS credentials from OIDC token
               id: aws-credentials
-              uses: aws-actions/configure-aws-credentials@v1
+              uses: aws-actions/configure-aws-credentials@v4
               with:
                 role-to-assume: arn:aws:iam::801214068283:role/LucasDallResumeGithubRole
                 aws-region: us-west-1
