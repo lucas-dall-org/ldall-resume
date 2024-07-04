@@ -24,7 +24,6 @@ terraform {
 
 # Data sources
 data "aws_caller_identity" "current" {}
-data "aws_canonical_user_id" "current" {}
 
 # AWS S3 Bucket for hosting the website
 module "s3_bucket" {
