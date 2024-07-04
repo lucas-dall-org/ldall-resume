@@ -12,6 +12,16 @@ terraform {
   }
 }
 
+# Backend configuration
+terraform {
+  backend "s3" {
+    bucket  = "ldall-tf-backend"
+    key     = "resume/terraform.tfstate"
+    region  = "us-east-1"
+    encrypt = true
+  }
+}
+
 # Data sources
 data "aws_caller_identity" "current" {}
 data "aws_canonical_user_id" "current" {}
@@ -24,8 +34,6 @@ module "s3_bucket" {
   bucket = "lucas-dall-resume-bucket"
 
   # Bucket policies
-  attach_policy                            = true
-  policy                                   = data.aws_iam_policy_document.bucket_policy.json
   attach_deny_insecure_transport_policy    = true
   attach_require_latest_tls_policy         = true
   attach_deny_incorrect_encryption_headers = true
@@ -37,7 +45,7 @@ module "s3_bucket" {
 
   expected_bucket_owner = data.aws_caller_identity.current.account_id
 
-  acl = "private" # "acl" conflicts with "grant" and "owner"
+  acl = "private"
 
   versioning = {
     status     = true
