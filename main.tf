@@ -60,7 +60,7 @@ module "s3_bucket" {
     rule = {
       apply_server_side_encryption_by_default = {
         kms_master_key_id = "aws/s3"
-        sse_algorithm     = "AES256"
+        sse_algorithm     = "aws:kms"
       }
     }
   }
