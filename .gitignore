@@ -1,0 +1,4 @@
+# Ingore terraform files:
+.terraform/
+terraform.tfstate.backup
+terraform.tfstate
