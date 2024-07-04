@@ -68,6 +68,6 @@ module "s3_bucket" {
   tags = {
     Owner       = "ldall"
     Environment = "Development"
-    Creatior    = "Terraform"
+    Creator     = "Terraform"
   }
 }
