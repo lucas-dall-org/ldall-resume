@@ -107,5 +107,5 @@ jobs:
 
       - name: Deploy website to S3 bucket
         run: |
-          aws s3 sync ./website s3://lucas-dall-resume-bucket --delete
+          aws s3 sync ./website s3://lucas-dall-resume-bucket
           aws s3 website s3://lucas-dall-resume-bucket --index-document index.html --error-document error.html
