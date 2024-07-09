@@ -20,6 +20,7 @@ jobs:
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.9.1
+          terraform_wrapper: false
 
       - name: Configure AWS credentials from OIDC token
         id: aws-credentials
@@ -32,9 +33,10 @@ jobs:
         run: terraform init
 
       - name: Deploy infrastructure
+        id: apply
         run: terraform apply -auto-approve
 
       - name: Deploy website to S3 bucket
         run: |
-          aws s3 sync ./website s3://lucas-dall-resume-bucket --sse AES256
-          aws s3 website s3://lucas-dall-resume-bucket --index-document index.html --error-document error.html
+          aws s3 sync ./website s3://${{ steps.apply.outputs.bucket_name }} --sse AES256
+          aws s3 website s3://${{ steps.apply.outputs.bucket_name }} --index-document index.html --error-document error.html
