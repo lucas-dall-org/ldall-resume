@@ -25,7 +25,7 @@ jobs:
         id: aws-credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::801214068283:role/LucasDallResumeGithubRole
+          role-to-assume: arn:aws:iam::801214068283:role/ResumeGithubReadRole
           aws-region: us-west-1
 
       - name: Initialize Terraform
