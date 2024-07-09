@@ -1,6 +1,6 @@
 # Providers
 provider "aws" {
-  region = "us-west-1"
+  region = "us-east-1"
 }
 
 terraform {
@@ -22,52 +22,51 @@ terraform {
   }
 }
 
-# Data sources
-data "aws_caller_identity" "current" {}
-
-# AWS S3 Bucket for hosting the website
-module "s3_bucket" {
-  source  = "terraform-aws-modules/s3-bucket/aws"
-  version = "4.1.2"
-
-  bucket = "lucas-dall-resume-bucket"
-
-  # Bucket policies
-  attach_deny_insecure_transport_policy    = true
-  attach_require_latest_tls_policy         = true
-  attach_deny_incorrect_encryption_headers = true
-
-  # S3 Bucket Ownership Controls
-  # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_ownership_controls
-  control_object_ownership = true
-  object_ownership         = "BucketOwnerPreferred"
-
-  expected_bucket_owner = data.aws_caller_identity.current.account_id
-
-  acl = "private"
-
-  versioning = {
-    status     = true
-    mfa_delete = false
-  }
-
-  website = {
-    index_document = "index.html"
-    error_document = "error.html"
-  }
-
-  server_side_encryption_configuration = {
-    rule = {
-      apply_server_side_encryption_by_default = {
-        sse_algorithm = "AES256"
-      }
-    }
-  }
-
+# Local variables
+locals {
   tags = {
     Owner       = "ldall"
     Environment = "Development"
     Creator     = "Terraform"
     Service     = "Resume"
   }
+}
+
+# ACM Certificate for the distribution
+module "acm_request_certificate" {
+  source = "cloudposse/acm-request-certificate/aws"
+
+  version = "v0.18.0"
+
+  domain_name                       = "lucasdallocchio.com"
+  process_domain_validation_options = true
+  ttl                               = "300"
+
+  tags = local.tags
+}
+
+# CloudFront distribution and s3 bucket
+module "cdn" {
+  source  = "cloudposse/cloudfront-s3-cdn/aws"
+  version = "v0.95.0"
+
+  name              = "lucasdall-resume"
+  aliases           = ["lucasdallocchio.com"]
+  dns_alias_enabled = true
+  parent_zone_name  = "lucasdallocchio.com"
+
+  cloudfront_access_log_create_bucket = false
+  cloudfront_access_logging_enabled   = false
+  s3_access_logging_enabled           = false
+
+  acm_certificate_arn = module.acm_request_certificate.arn
+
+  tags = local.tags
+
+  depends_on = [module.acm_request_certificate]
+}
+
+# Outputs
+output "bucket_name" {
+  value = module.cdn.s3_bucket
 }
