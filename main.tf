@@ -70,3 +70,8 @@ module "cdn" {
 output "bucket_name" {
   value = module.cdn.s3_bucket
 }
+
+output "distribution_id" {
+  value = module.cdn.cf_id
+
+}

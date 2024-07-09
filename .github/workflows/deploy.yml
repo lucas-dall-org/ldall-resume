@@ -40,3 +40,6 @@ jobs:
         run: |
           aws s3 sync ./website s3://${{ steps.apply.outputs.bucket_name }} --sse AES256
           aws s3 website s3://${{ steps.apply.outputs.bucket_name }} --index-document index.html --error-document error.html
+
+      - name: Invalidate CloudFront Cache
+        run: aws cloudfront create-invalidation --distribution-id ${{ steps.apply.outputs.distribution_id }} --paths "/*"
