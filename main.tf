@@ -68,5 +68,6 @@ module "s3_bucket" {
     Owner       = "ldall"
     Environment = "Development"
     Creator     = "Terraform"
+    Service     = "Resume"
   }
 }
