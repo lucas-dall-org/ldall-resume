@@ -1,6 +1,6 @@
-# Lucas Dall'Occghio Resume Repository
+# Lucas Dall'Occhio Resume Repository
 
-This repository contains my resume in HTML format. It is built with Terraform and deployed using GitHub Actions. Any recommendations and improvements are totally welcome. 
+This repository contains my resume in HTML format. Hosted on AWS, it is built with Terraform and deployed using GitHub Actions. Any recommendations and improvements are totally welcome. 
 Reach me out in lucas.dall.celmi@gmail.com or [Linkedin](https://www.linkedin.com/in/lucas-dall-occhio/)
 
 ## Table of Contents
