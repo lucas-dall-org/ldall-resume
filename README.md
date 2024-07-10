@@ -1,4 +1,4 @@
-# Lucas Dall'Occhio Resume Repository
+# Lucas Dall'Occhio Resume Repository ![deploy workflow](https://github.com/lucas-dall-org/ldall-resume/actions/workflows/deploy.yml/badge.svg)
 
 This repository contains my resume in HTML format. Hosted on AWS, it is built with Terraform and deployed using GitHub Actions. Any recommendations and improvements are totally welcome. 
 Reach me out in lucas.dall.celmi@gmail.com or [Linkedin](https://www.linkedin.com/in/lucas-dall-occhio/)
