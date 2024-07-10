@@ -34,11 +34,15 @@ jobs:
       - name: Deploy infrastructure
         id: apply
         run: terraform apply -auto-approve
+      
+      - name: Get outputs
+        uses: dflook/terraform-output@v1
+        id: tf-outputs
 
       - name: Deploy website to S3 bucket
         run: |
-          aws s3 sync ./website s3://${{ steps.apply.outputs.bucket_name }} --sse AES256
-          aws s3 website s3://${{ steps.apply.outputs.bucket_name }} --index-document index.html --error-document error.html
+          aws s3 sync ./website s3://${{ steps.tf-outputs.outputs.bucket_name }} --sse AES256
+          aws s3 website s3://${{ steps.tf-outputs.outputs.bucket_name }} --index-document index.html --error-document error.html
 
       - name: Invalidate CloudFront Cache
-        run: aws cloudfront create-invalidation --distribution-id ${{ steps.apply.outputs.distribution_id }} --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ steps.tf-outputs.outputs.distribution_id }} --paths "/*"
