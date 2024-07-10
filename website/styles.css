@@ -6,6 +6,28 @@ body {
     background-color: #f4f4f4;
 }
 
+.header-banner {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-banner a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.header-banner a:hover {
+    text-decoration: underline;
+}
+
+.header-banner img {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
 .resume {
     max-width: 800px;
     margin: 20px auto;
