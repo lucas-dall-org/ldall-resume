@@ -6,226 +6,271 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- booutstarp 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- ubuntu sans-serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="header-banner">
-        <p>Built and deployed from <a
-                href="https://github.com/lucas-dall-org/ldall-resume">https://github.com/lucas-dall-org/ldall-resume</a>
-        </p>
-        <a href="http://aws.amazon.com/what-is-cloud-computing">
-            <img src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" alt="Powered by AWS Cloud Computing">
-        </a>
-    </div>
-    <div class="resume">
-        <header class="header">
-            <img src="assets/images/profile-pic.jpeg" alt="Profile Picture" class="profile-picture">
-            <div class="header-text">
-                <h1>Lucas Dall’Occhio</h1>
-                <p>Cloud Architect | DevOps | SRE</p>
-                <p>Buenos Aires, Argentina</p>
-                <p>(+54) 11 3678 2208</p>
-                <p><a href="mailto:lucas.dall.celmi@gmail.com">lucas.dall.celmi@gmail.com</a></p>
-                <p>
-                    <a href="https://www.linkedin.com/in/lucas-dall-occhio/">
-                        <img src="assets/images/linkedin-logo.png" alt="LinkedIn Logo" class="linkedin-logo"> LinkedIn
+        <!-- row - 2 columns - 50% each --> 
+         <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 pt-2">
+                    <a href="http://aws.amazon.com/what-is-cloud-computing">
+                        <img src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" class="img-fluid" width="30%" alt="Powered by AWS Cloud Computing">
                     </a>
-                </p>
-            </div>
-        </header>
-
-        <section class="introduction">
-            <h2>Introduction</h2>
-            <p>Passionate about facing challenges and thriving in them, I always focus on goals and put my best effort
-                into achieving them. With over 8 years of experience in technology, I have developed strong technical
-                knowledge and numerous soft skills. I have been part of multidisciplinary and multicultural teams,
-                worked in various countries, spoken different languages, and handled diverse responsibilities. I am
-                self-taught, self-motivated, independent, and a team player, always striving to deliver high-quality
-                work that I can be proud of.</p>
-        </section>
-
-        <section class="work-experience">
-            <h2>Work Experience</h2>
-            <div class="job">
-                <h3>Cloud Architect</h3>
-                <p>Toptal | 2020 - Present, Remote</p>
-                <p>Toptal is an exclusive network of top freelance software developers. As part of the Toptal network, I
-                    have contributed to various short-term projects, delivering cloud consulting services across diverse
-                    industries such as healthcare, finance, and engineering. My role involved optimizing cloud
-                    infrastructure, implementing CI/CD pipelines, and ensuring robust security practices.</p>
-            </div>
-            <div class="job">
-                <h3>Senior Architect</h3>
-                <p>Caylent Inc | 2019 - 2023, Remote</p>
-                <p>Caylent is a leading DevOps consulting company. In my role as a Senior Architect, I provide expertise
-                    in cloud adoption, migrations, and platform optimization projects. I collaborate closely with
-                    clients to assess their needs, plan projects meticulously, and offer strategic advice. My
-                    responsibilities include designing scalable architectures, automating infrastructure provisioning,
-                    and enhancing system performance.</p>
-            </div>
-            <div class="job">
-                <h3>Lead DevOps - Senior Architect</h3>
-                <p>IncluIT | 2018 - 2019, Remote</p>
-                <p>As a Lead DevOps - Solutions Architect, I led a consulting team for a US-based health services
-                    company. The project involved migrating over 200 applications from on-premises infrastructure to
-                    AWS, requiring extensive on-site work in Chicago. I coordinated a team across three countries and
-                    time zones, implementing high availability, security best practices, and cross-region/cross-account
-                    infrastructure setups.</p>
-            </div>
-            <div class="job">
-                <h3>Lead DevOps</h3>
-                <p>HeadWay Digital | 2016 - 2018, Remote</p>
-                <p>In this role, I led the infrastructure team, designing technology and architecture for the company's
-                    projects. I supported a highly available and elastic platform, replatformed and re-architected
-                    applications, and implemented provisioning and configuration management solutions. My work also
-                    involved monitoring, operations tasks, and ensuring the platform's scalability and reliability.</p>
-            </div>
-            <div class="job">
-                <h3>DevOps</h3>
-                <p>ZooLogic | 2016, Remote</p>
-                <p>As a DevOps engineer for the Cloud project, I was responsible for the cloud infrastructure. I
-                    implemented a highly available and elastic platform on AWS, developed automated CI/CD pipelines, and
-                    introduced new cloud governance automations. My role also included provisioning, configuration
-                    management, and database administration.</p>
-            </div>
-            <div class="job">
-                <h3>Production Support - DevOps</h3>
-                <p>Mobile | 2013 - 2016, Buenos Aires, Argentina/Remote</p>
-                <p>As a member of the operations team and DevOps engineer, I managed a hybrid infrastructure with over
-                    500 instances. I was responsible for monitoring, troubleshooting, and improving over 100
-                    applications. My work included developing deployment processes, automating administrative tasks, and
-                    creating auto-remediation pipelines to enhance system resilience and efficiency.</p>
-            </div>
-        </section>
-
-        <section class="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Remitly - Network Engineer and SRE / Toptal</h3>
-                <p><a href="https://www.remitly.com/">https://www.remitly.com/</a></p>
-                <p>As a Site Reliability Engineer, I migrated the company VPN using infrastructure as code,
-                    significantly enhancing reliability, monitoring, and security. This migration improved VPN
-                    stability, reduced downtime, and ensured secure and consistent connectivity for all users. I also
-                    implemented new gateway services for money transaction services with new partners, streamlining
-                    integrations, improving transaction processing speed, and ensuring compliance with security and
-                    financial regulations. Additionally, I improved the release and service management platform by
-                    adding new features and fixing issues, enhancing user experience, reducing deployment times, and
-                    increasing platform stability. My work also involved identifying operational problems and
-                    reliability issues across the entire stack, conducting comprehensive assessments, providing
-                    actionable insights, and implementing solutions to enhance system performance and reduce downtime.
-                </p>
-            </div>
-            <div class="project">
-                <h3>Syngenta - AWS Cost Optimization Project / Toptal</h3>
-                <p><a href="https://www.syngenta.com/">https://www.syngenta.com/</a></p>
-                <p>A large enterprise company needed an AWS expert to do cost audits and optimize its cloud expenses. I
-                    analyzed their cost structure and over 25 accounts in three different regions and proposed large
-                    optimization projects focusing on cost centers and AWS services. We optimized the expense of over 15
-                    different AWS services like EC2, EBS, S3, Athena, RDS, DynamoDB, and more; it involved hundreds of
-                    teams and required a lot of coordination to move forward. Extensive analysis of reserved instances
-                    and savings plans were needed, and many purchases were made to optimize the compute resources
-                    consumption. After a semester of work, many services were shut down, rightsized, or adjusted in
-                    their configurations, which meant a nearly $1 million reduction in expenses.</p>
-            </div>
-            <div class="project">
-                <h3>ISIC - Orchestrated CI/CD Pipeline and Implemented IaC / Toptal</h3>
-                <p><a href="https://www.isic.org/">https://www.isic.org/</a></p>
-                <p>I led the assessment of our client's CI/CD pipelines, identifying failure points and problematic
-                    deployments. I designed a resilient, seamless new architecture that accelerated developers' release
-                    cycles. Utilizing AWS Well-Architected Framework guidelines, I created a multi-account landing zone
-                    and deployed the new infrastructure using Terraform and Terraform Cloud for fully automated,
-                    human-free deployments. The client's entire infrastructure and CI/CD pipelines were codified by the
-                    project's end, facilitating an easy handover. I also added new environment isolation and GitOps
-                    features, enhancing the developer experience.</p>
-            </div>
-            <div class="project">
-                <h3>Intelligent Medical Objects - On-prem to AWS Migration / Toptal</h3>
-                <p><a href="https://www.imohealth.com/">https://www.imohealth.com/</a></p>
-                <p>I led a consulting team for a healthcare software firm, overseeing the migration of over 200
-                    applications from on-premises to the cloud. This extensive project involved several months of
-                    on-site work in Chicago, coordinating with a team spread across three different countries and time
-                    zones. I set up a HIPAA-compliant, cross-region infrastructure using cloud and security best
-                    practices along with state-of-the-art tools. This enabled continuous delivery and fully automated
-                    disaster recovery processes, ensuring robust and secure operations.</p>
-            </div>
-            <div class="project">
-                <h3>Nebula - Landing Zone Development / Toptal</h3>
-                <p><a href="https://linktr.ee/ownic.nft">https://linktr.ee/ownic.nft</a></p>
-                <p>A startup about to launch its NFT marketplace needed an experienced DevOps professional. I designed
-                    and implemented a resilient environment using AWS best practices. I created a multi-account landing
-                    zone with a multi-tier, highly available network layout. The applications were re-platformed from
-                    ECS to EKS and adapted to run on Kubernetes using Helm charts. Each application had dedicated CI/CD
-                    pipelines to build and release code continuously. The entire environment and infrastructure were
-                    developed using Terraform, adhering to best practices to deliver a fault-tolerant, highly available,
-                    cost-effective solution. By implementing a multi-account structure, I ensured isolated and secure
-                    environments for different stages of development. The Kubernetes clusters provided scalability and
-                    resilience, while the CI/CD pipelines facilitated rapid and reliable deployments. This approach
-                    enabled the startup to focus on its core business and be confident in the stability and efficiency
-                    of its underlying infrastructure. The project highlighted my ability to deliver robust, scalable,
-                    and automated solutions in cloud environments, which is critical for supporting a dynamic
-                    marketplace's rapid growth and demands.</p>
-            </div>
-            <div class="project">
-                <h3>HiMarley - Serverless Stack Development / Caylent</h3>
-                <p><a href="https://www.himarley.com/">https://www.himarley.com/</a></p>
-                <p>A SaaS for insurance companies needed expertise and advice on cloud best practices. I was the primary
-                    engineer assigned to the client, having to review their stack and services. I designed and delivered
-                    a well-architected landing zone based on the fundamental pillars of the framework, such as security,
-                    reliability, and operational excellence. The ecosystem relied on serverless applications and EC2
-                    static workers. A part of the process consisted of providing continuous integration and delivery to
-                    improve the cadence of the development process and ease the operational overhead. Containerizing
-                    vital business logic components were key to improving the QA and testing phases and providing high
-                    availability and fault tolerance capabilities in key components. Designing a SOC2-compliant
-                    infrastructure was an essential piece of the project.</p>
-            </div>
-            <div class="project">
-                <h3>Novus - AWS Migration / Caylent</h3>
-                <p><a href="https://www.novus.com/">https://www.novus.com/</a></p>
-                <p>I assisted a US-based fintech company in migrating from on-premises data centers to AWS. After
-                    assessing their stack and needs, I designed a highly available landing zone in AWS using the
-                    Well-Architected Framework. The infrastructure was entirely managed with Infrastructure as Code, and
-                    the application was re-engineered and re-platformed to run on Kubernetes. All deployments were
-                    automated through CI/CD pipelines. Additionally, I was tasked with cost reduction and successfully
-                    reduced AWS bills by up to 60% by leveraging Spot Instances and ARM64-based worker nodes on our
-                    Kubernetes clusters. This approach optimized resource utilization and significantly cut operational
-                    costs, demonstrating my ability to deliver efficient and cost-effective solutions in cloud
-                    environments. Overall, the project involved a complete transformation of the client's
-                    infrastructure, enabling scalable, resilient, and cost-effective operations in the cloud while
-                    maintaining high performance and availability.</p>
-            </div>
-        </section>
-
-        <section class="education">
-            <h2>Education</h2>
-            <p>AWS / Solutions Architect Professional 2020 - ID: 6C8189M1EEEE145G</p>
-            <p>AWS / Solutions Architect Associate 2019 - ID: 6C8189M1EEEE145G</p>
-        </section>
-
-        <section class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Cloud Providers: AWS, Azure</li>
-                <li>Containers: Docker, Kubernetes, Helm, ECS, ECR</li>
-                <li>Infrastructure as Code: Terraform, CloudFormation</li>
-                <li>CI/CD: CodePipeline, CodeBuild, CodeDeploy, Octopus, GitLab CI, GitHub Actions, CodeShip</li>
-                <li>Configuration Management/Bootstrapping: SSM, Ansible, Chef, Packer</li>
-                <li>Monitoring: CloudWatch, NewRelic, Datadog, Prometheus</li>
-                <li>Scripting: Bash, Python, PowerShell</li>
-                <li>Databases: DynamoDB, MongoDB, MySQL, Postgres</li>
-                <li>Governance/Audit: CloudConfig, CloudTrail, GuardDuty</li>
-                <li>Serverless: API Gateway, Lambda, SAM</li>
-            </ul>
-        </section>
-
-        <section class="languages">
-            <h2>Languages</h2>
-            <ul>
-                <li>English (Advanced)</li>
-                <li>Portuguese (Advanced)</li>
-                <li>Spanish (Native)</li>
-            </ul>
-        </section>
+                </div>
+                
+                <!-- full col-12 all devices-->
+                <div class="col-12 col-md-6 pt-2">
+                    <p>Built and deployed from <br>
+                        <a class="text-white" href="https://github.com/lucas-dall-org/ldall-resume">
+                            github.com/lucas-dall-org/ldall-resume
+                        </a>
+                    </p>
+                </div>
+             </div>
+         </div>
     </div>
+    
+    <!-- full description-->
+     <section class="container">
+        <div class="resume">
+            <header class="header">
+                <div class="header-text">
+                    <!-- div row responsive -->
+                    <div class="row">
+                        <div class="col-12 col-md-4 p-4">
+                            <img src="assets/images/profile-pic.jpeg" alt="Profile Picture" class="profile-picture">
+                        </div>
+                        
+                        <!-- devices col-12 / -->
+                        <div class="col-12 col-md-8 p-4">
+                            <h1>Lucas Dall’Occhio</h1>
+                            <p class="pt-3">
+                                Cloud Architect | DevOps | SRE <br>
+                                Buenos Aires, Argentina <br>
+                                (+54) 11 3678 2208
+                            </p>
+                            <div class="row">
+                                <div class="col-12 col-md-5">
+                                    <p><a href="mailto:lucas.dall.celmi@gmail.com">lucas.dall.celmi@gmail.com</a></p>
+                                </div>
+                                <div class="col-12 col-md-5">
+                                    <a href="https://www.linkedin.com/in/lucas-dall-occhio/">LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+    
+            <section class="introduction">
+                <h2 class="black-title">Introduction</h2>
+                <p class="description">
+                    Passionate about facing challenges and thriving in them, I always focus on goals and put my best effort
+                    into achieving them. With over 8 years of experience in technology, I have developed strong technical
+                    knowledge and numerous soft skills. I have been part of multidisciplinary and multicultural teams,
+                    worked in various countries, spoken different languages, and handled diverse responsibilities. I am
+                    self-taught, self-motivated, independent, and a team player, always striving to deliver high-quality
+                    work that I can be proud of.
+                </p>
+            </section>
+    
+            <section class="work-experience">
+                <h2 class="black-title">Work Experience</h2>
+                <div class="col-12 job pt-4">
+                    <h3>Cloud Architect</h3>
+                    <p>Toptal | 2020 - Present, Remote</p>
+                    <p class="description">Toptal is an exclusive network of top freelance software developers. As part of the Toptal network, I
+                        have contributed to various short-term projects, delivering cloud consulting services across diverse
+                        industries such as healthcare, finance, and engineering. My role involved optimizing cloud
+                        infrastructure, implementing CI/CD pipelines, and ensuring robust security practices.</p>
+                </div>
+                <div class="job">
+                    <h3>Senior Architect</h3>
+                    <p>Caylent Inc | 2019 - 2023, Remote</p>
+                    <p class="description">Caylent is a leading DevOps consulting company. In my role as a Senior Architect, I provide expertise
+                        in cloud adoption, migrations, and platform optimization projects. I collaborate closely with
+                        clients to assess their needs, plan projects meticulously, and offer strategic advice. My
+                        responsibilities include designing scalable architectures, automating infrastructure provisioning,
+                        and enhancing system performance.</p>
+                </div>
+                <div class="job">
+                    <h3>Lead DevOps - Senior Architect</h3>
+                    <p>IncluIT | 2018 - 2019, Remote</p>
+                    <p class="description">As a Lead DevOps - Solutions Architect, I led a consulting team for a US-based health services
+                        company. The project involved migrating over 200 applications from on-premises infrastructure to
+                        AWS, requiring extensive on-site work in Chicago. I coordinated a team across three countries and
+                        time zones, implementing high availability, security best practices, and cross-region/cross-account
+                        infrastructure setups.</p>
+                </div>
+                <div class="job">
+                    <h3>Lead DevOps</h3>
+                    <p>HeadWay Digital | 2016 - 2018, Remote</p>
+                    <p class="description">In this role, I led the infrastructure team, designing technology and architecture for the company's
+                        projects. I supported a highly available and elastic platform, replatformed and re-architected
+                        applications, and implemented provisioning and configuration management solutions. My work also
+                        involved monitoring, operations tasks, and ensuring the platform's scalability and reliability.</p>
+                </div>
+                <div class="job">
+                    <h3>DevOps</h3>
+                    <p>ZooLogic | 2016, Remote</p>
+                    <p class="description">As a DevOps engineer for the Cloud project, I was responsible for the cloud infrastructure. I
+                        implemented a highly available and elastic platform on AWS, developed automated CI/CD pipelines, and
+                        introduced new cloud governance automations. My role also included provisioning, configuration
+                        management, and database administration.</p>
+                </div>
+                <div class="job">
+                    <h3>Production Support - DevOps</h3>
+                    <p>Mobile | 2013 - 2016, Buenos Aires, Argentina/Remote</p>
+                    <p class="description">As a member of the operations team and DevOps engineer, I managed a hybrid infrastructure with over
+                        500 instances. I was responsible for monitoring, troubleshooting, and improving over 100
+                        applications. My work included developing deployment processes, automating administrative tasks, and
+                        creating auto-remediation pipelines to enhance system resilience and efficiency.</p>
+                </div>
+            </section>
+    
+            <section class="projects">
+                <h2 class="black-title">Projects</h2>
+                <div class="project">
+                    <h3 class="pt-4">Remitly - Network Engineer and SRE / Toptal</h3>
+                    <p><a href="https://www.remitly.com/">https://www.remitly.com/</a></p>
+                    <p class="description">As a Site Reliability Engineer, I migrated the company VPN using infrastructure as code,
+                        significantly enhancing reliability, monitoring, and security. This migration improved VPN
+                        stability, reduced downtime, and ensured secure and consistent connectivity for all users. I also
+                        implemented new gateway services for money transaction services with new partners, streamlining
+                        integrations, improving transaction processing speed, and ensuring compliance with security and
+                        financial regulations. Additionally, I improved the release and service management platform by
+                        adding new features and fixing issues, enhancing user experience, reducing deployment times, and
+                        increasing platform stability. My work also involved identifying operational problems and
+                        reliability issues across the entire stack, conducting comprehensive assessments, providing
+                        actionable insights, and implementing solutions to enhance system performance and reduce downtime.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>Syngenta - AWS Cost Optimization Project / Toptal</h3>
+                    <p><a href="https://www.syngenta.com/">https://www.syngenta.com/</a></p>
+                    <p class="description">A large enterprise company needed an AWS expert to do cost audits and optimize its cloud expenses. I
+                        analyzed their cost structure and over 25 accounts in three different regions and proposed large
+                        optimization projects focusing on cost centers and AWS services. We optimized the expense of over 15
+                        different AWS services like EC2, EBS, S3, Athena, RDS, DynamoDB, and more; it involved hundreds of
+                        teams and required a lot of coordination to move forward. Extensive analysis of reserved instances
+                        and savings plans were needed, and many purchases were made to optimize the compute resources
+                        consumption. After a semester of work, many services were shut down, rightsized, or adjusted in
+                        their configurations, which meant a nearly $1 million reduction in expenses.</p>
+                </div>
+                <div class="project">
+                    <h3>ISIC - Orchestrated CI/CD Pipeline and Implemented IaC / Toptal</h3>
+                    <p><a href="https://www.isic.org/">https://www.isic.org/</a></p>
+                    <p class="description">I led the assessment of our client's CI/CD pipelines, identifying failure points and problematic
+                        deployments. I designed a resilient, seamless new architecture that accelerated developers' release
+                        cycles. Utilizing AWS Well-Architected Framework guidelines, I created a multi-account landing zone
+                        and deployed the new infrastructure using Terraform and Terraform Cloud for fully automated,
+                        human-free deployments. The client's entire infrastructure and CI/CD pipelines were codified by the
+                        project's end, facilitating an easy handover. I also added new environment isolation and GitOps
+                        features, enhancing the developer experience.</p>
+                </div>
+                <div class="project">
+                    <h3>Intelligent Medical Objects - On-prem to AWS Migration / Toptal</h3>
+                    <p><a href="https://www.imohealth.com/">https://www.imohealth.com/</a></p>
+                    <p class="description">I led a consulting team for a healthcare software firm, overseeing the migration of over 200
+                        applications from on-premises to the cloud. This extensive project involved several months of
+                        on-site work in Chicago, coordinating with a team spread across three different countries and time
+                        zones. I set up a HIPAA-compliant, cross-region infrastructure using cloud and security best
+                        practices along with state-of-the-art tools. This enabled continuous delivery and fully automated
+                        disaster recovery processes, ensuring robust and secure operations.</p>
+                </div>
+                <div class="project">
+                    <h3>Nebula - Landing Zone Development / Toptal</h3>
+                    <p><a href="https://linktr.ee/ownic.nft">https://linktr.ee/ownic.nft</a></p>
+                    <p class="description">A startup about to launch its NFT marketplace needed an experienced DevOps professional. I designed
+                        and implemented a resilient environment using AWS best practices. I created a multi-account landing
+                        zone with a multi-tier, highly available network layout. The applications were re-platformed from
+                        ECS to EKS and adapted to run on Kubernetes using Helm charts. Each application had dedicated CI/CD
+                        pipelines to build and release code continuously. The entire environment and infrastructure were
+                        developed using Terraform, adhering to best practices to deliver a fault-tolerant, highly available,
+                        cost-effective solution. By implementing a multi-account structure, I ensured isolated and secure
+                        environments for different stages of development. The Kubernetes clusters provided scalability and
+                        resilience, while the CI/CD pipelines facilitated rapid and reliable deployments. This approach
+                        enabled the startup to focus on its core business and be confident in the stability and efficiency
+                        of its underlying infrastructure. The project highlighted my ability to deliver robust, scalable,
+                        and automated solutions in cloud environments, which is critical for supporting a dynamic
+                        marketplace's rapid growth and demands.</p>
+                </div>
+                <div class="project">
+                    <h3>HiMarley - Serverless Stack Development / Caylent</h3>
+                    <p><a href="https://www.himarley.com/">https://www.himarley.com/</a></p>
+                    <p class="description">A SaaS for insurance companies needed expertise and advice on cloud best practices. I was the primary
+                        engineer assigned to the client, having to review their stack and services. I designed and delivered
+                        a well-architected landing zone based on the fundamental pillars of the framework, such as security,
+                        reliability, and operational excellence. The ecosystem relied on serverless applications and EC2
+                        static workers. A part of the process consisted of providing continuous integration and delivery to
+                        improve the cadence of the development process and ease the operational overhead. Containerizing
+                        vital business logic components were key to improving the QA and testing phases and providing high
+                        availability and fault tolerance capabilities in key components. Designing a SOC2-compliant
+                        infrastructure was an essential piece of the project.</p>
+                </div>
+                <div class="project">
+                    <h3>Novus - AWS Migration / Caylent</h3>
+                    <p><a href="https://www.novus.com/">https://www.novus.com/</a></p>
+                    <p class="description">I assisted a US-based fintech company in migrating from on-premises data centers to AWS. After
+                        assessing their stack and needs, I designed a highly available landing zone in AWS using the
+                        Well-Architected Framework. The infrastructure was entirely managed with Infrastructure as Code, and
+                        the application was re-engineered and re-platformed to run on Kubernetes. All deployments were
+                        automated through CI/CD pipelines. Additionally, I was tasked with cost reduction and successfully
+                        reduced AWS bills by up to 60% by leveraging Spot Instances and ARM64-based worker nodes on our
+                        Kubernetes clusters. This approach optimized resource utilization and significantly cut operational
+                        costs, demonstrating my ability to deliver efficient and cost-effective solutions in cloud
+                        environments. Overall, the project involved a complete transformation of the client's
+                        infrastructure, enabling scalable, resilient, and cost-effective operations in the cloud while
+                        maintaining high performance and availability.</p>
+                </div>
+            </section>
+    
+            <section class="education">
+                <h2 class="black-title">Education</h2>
+                <ul class="p-4">
+                    <li>AWS / Solutions Architect Professional 2020 - ID: 6C8189M1EEEE145G</li>
+                    <li>AWS / Solutions Architect Associate 2019 - ID: 6C8189M1EEEE145G</li>
+                </ul>
+            </section>
+    
+            <section class="skills">
+                <h2 class="black-title">Skills</h2>
+                <ul class="p-4">
+                    <li>Cloud Providers: AWS, Azure</li>
+                    <li>Containers: Docker, Kubernetes, Helm, ECS, ECR</li>
+                    <li>Infrastructure as Code: Terraform, CloudFormation</li>
+                    <li>CI/CD: CodePipeline, CodeBuild, CodeDeploy, Octopus, GitLab CI, GitHub Actions, CodeShip</li>
+                    <li>Configuration Management/Bootstrapping: SSM, Ansible, Chef, Packer</li>
+                    <li>Monitoring: CloudWatch, NewRelic, Datadog, Prometheus</li>
+                    <li>Scripting: Bash, Python, PowerShell</li>
+                    <li>Databases: DynamoDB, MongoDB, MySQL, Postgres</li>
+                    <li>Governance/Audit: CloudConfig, CloudTrail, GuardDuty</li>
+                    <li>Serverless: API Gateway, Lambda, SAM</li>
+                </ul>
+            </section>
+    
+            <section class="languages">
+                <h2 class="black-title">Languages</h2>
+                <ul class="p-4">
+                    <li>English (Advanced)</li>
+                    <li>Portuguese (Advanced)</li>
+                    <li>Spanish (Native)</li>
+                </ul>
+            </section>
+        </div>
+     </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
