@@ -9,7 +9,7 @@ body {
 .header-banner {
     background-color: #333;
     color: white;
-    padding: 10px 20px;
+    padding: 30px 20px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -68,6 +68,29 @@ body {
     margin: 0;
 }
 
+/* section tittle*/
+
+/* Full Name*/
+
+h1{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+}
+
+.black-title{
+    color: #fff;
+    padding: 20px 30px;
+    font-size: 24px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* paragraphs descriptions  */
+.description{
+    padding: 20px;
+}
+
 .introduction,
 .work-experience,
 .projects,
@@ -79,7 +102,7 @@ body {
 
 h2 {
     background-color: #333;
-    color: white;
+    color: #000 ;
     padding: 5px;
     margin: 0 -20px;
     padding-left: 20px;
