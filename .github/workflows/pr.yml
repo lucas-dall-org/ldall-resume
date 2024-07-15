@@ -28,8 +28,7 @@ jobs:
       - name: Run htmlhint
         id: htmlhint
         run: |
-          htmlhint '**/*.html' > htmlhint_output.txt
-          cat htmlhint_output.txt
+          htmlhint '**/*.html'
 
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v3
@@ -61,7 +60,7 @@ jobs:
 
       - uses: actions/github-script@v7
         env:
-          LINT: "htmlhint\n$(cat htmlhint_output.txt)"
+          LINT: "htmlhint\n${{ steps.htmlhint.outputs.stdout }}"
           PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
