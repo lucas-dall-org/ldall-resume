@@ -60,7 +60,7 @@ jobs:
 
       - uses: actions/github-script@v7
         env:
-          LINT: "htmlhint\n${{ steps.htmlhint.outputs.stdout }}"
+          LINT: "${{join(steps.htmlhint.outputs.*, '\n')}}"
           PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -97,7 +97,7 @@ jobs:
 
             </details>
 
-            #### HTMLHint Results 📋
+            #### HTMLHint Results 📋\`${{ steps.htmlhint.outcome }}\`
 
             <details><summary>Show HTMLHint Output</summary>
 
